@@ -58,15 +58,15 @@
                     <div class="col-xs-4">
                         <button type="submit" class="btn btn-danger btn-block btn-flat"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
                     </div>
-                    <div class="col-xs-6">
+                    <!-- <div class="col-xs-6">
                         <?php echo anchor('#', '<i class="fa fa-eye-slash" aria-hidden="true"></i> Lupa Password', array('class' => 'btn btn-primary btn-block btn-flat')); ?>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- /.col -->
 
 
                 <!-- /.col -->
-                <div class="row" style="margin-top: 20px;">
+                <!-- <div class="row" style="margin-top: 20px;">
                     <div class="col-xs-12">
                         <div class="callout callout-info">
                             <h4>Level Super Admin</h4>
@@ -80,8 +80,7 @@
                             <p><b>Password</b> : password</p>
                         </div>
                     </div>
-
-                </div>
+                </div> -->
                 </form>
 
 

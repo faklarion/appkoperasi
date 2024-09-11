@@ -7,16 +7,25 @@
 			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
 				<table class='table table-bordered'>
 					<tr>
-						<td width='200'>Nama Pengaju</td><td><input type="text" class="form-control" name="id_pengajuan" id="id_pengajuan" placeholder="Pengajuan" value="<?php echo $id_pengajuan; ?>" /></td>
+						<td width='200'>Nama Pengaju</td>
+						<td>
+							<select name="id_pengajuan" id="id_pengajuan" class="form-control">
+								<?php foreach ($data_pengajuan as $row) : ?>
+									<option value="<?php echo $row->id_pengajuan ?>"><?php echo $row->nama?></option>
+								<?php endforeach ?>
+							</select>
+						</td>
+							
 					</tr>
 
 					<tr>
-						<td width='200'>Foto Jaminan </td><td><input type="file" class="form-control" name="foto_jaminan[]" id="foto_jaminan" placeholder="Foto Jaminan" /></td>
+						<td width='200'>Foto Jaminan </td>
+						<td> <input type="file" class="form-control" name="foto_jaminan[]" id="foto_jaminan" multiple></td>
 					</tr>
 	    
 					<tr>
-						<td width='200'>Foto Rumah <?php echo form_error('foto_rumah') ?></td>
-						<td> <input type="file" class="form-control" rows="3" name="foto_rumah[]" id="foto_rumah" placeholder="Foto Rumah"></td>
+						<td width='200'>Foto Rumah</td>
+						<td> <input type="file" class="form-control" rows="3" name="foto_rumah[]" id="foto_rumah" multiple></td>
 					</tr>
 	
 					<tr>

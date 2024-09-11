@@ -58,19 +58,18 @@ function nama_status($status) {
         case 0:
             return 'Input Pengajuan';
         case 1:
-            return 'Acc Pengajuan';
-        case 2:
-            return 'Revisi Pengajuan';
-        case 3:
-            return 'Pengajuan Ditolak';
-        case 4:
-            return 'Acc Survey';
-        case 5:
-            return 'Revisi Survey';
-        case 6:
-            return 'Survey Ditolak';
-        case 7:
-            return 'Pencairan';
+            return 'ACC Pengajuan';
+        default:
+            return 'Status Tidak Dikenal';
+    }
+}
+
+function nama_survey($status) {
+    switch($status) {
+        case 0:
+            return 'Input Survey';
+        case 1:
+            return 'ACC Survey';
         default:
             return 'Status Tidak Dikenal';
     }

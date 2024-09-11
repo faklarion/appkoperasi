@@ -356,5 +356,12 @@
             });
         });
         </script>
+        <script>
+            $(document).ready(function() {
+                $('#id_pengajuan').select2({
+                    width: '100%'  // Mengatur lebar Select2 menjadi 100%
+                });
+            });
+        </script>
     </body>
 </html>

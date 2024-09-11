@@ -1,6 +1,6 @@
 <section class="sidebar">
     <!-- search form -->
-    <form action="#" method="get" class="sidebar-form">
+    <!-- <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
             <input type="text" name="q" class="form-control" placeholder="Search...">
             <span class="input-group-btn">
@@ -8,22 +8,26 @@
                 </button>
             </span>
         </div>
-    </form>
+    </form> -->
     <!-- /.search form -->
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
        
-        
+    <li><?php echo anchor('welcome',"<i class='fa fa-tachometer'></i> DASHBOARD");?></li>
         <?php
         // chek settingan tampilan menu
         $setting = $this->db->get_where('tbl_setting',array('id_setting'=>1))->row_array();
         if($setting['value']=='ya'){
             // cari level user
             $id_user_level = $this->session->userdata('id_user_level');
-            $sql_menu = "SELECT * 
-            FROM tbl_menu 
-            WHERE id_menu in(select id_menu from tbl_hak_akses where id_user_level=$id_user_level) and is_main_menu=0 and is_aktif='y'";
-        }else{
+            if($id_user_level != NULL) {
+                $sql_menu = "SELECT * 
+                FROM tbl_menu 
+                WHERE id_menu in(select id_menu from tbl_hak_akses where id_user_level=$id_user_level) and is_main_menu=0 and is_aktif='y'";
+            } else {
+                redirect(site_url('auth'));
+            }           
+        } else {
             $sql_menu = "select * from tbl_menu where is_aktif='y' and is_main_menu=0";
         }
 

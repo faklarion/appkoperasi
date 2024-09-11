@@ -40,12 +40,12 @@
                     <th class="text-center">Action</th>
                 </tr>
             </thead>
-            
+            <tbody>
             <?php
             foreach ($tbl_pengajuan_data as $tbl_pengajuan)
             {
                 ?>
-            <tbody>
+            <tr>
                     <td width="10px"><?php echo ++$start ?></td>
                     <td><?php echo $tbl_pengajuan->no_pengajuan ?></td>
                     <td><?php echo $tbl_pengajuan->nama ?></td>
@@ -65,10 +65,11 @@
                         ?>
                     </td>
 		        </tr>
-            </tbody>
                 <?php
             }
             ?>
+            </tbody>
+                
         </table>
 
         </div>

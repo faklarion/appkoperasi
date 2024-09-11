@@ -37,7 +37,6 @@
                     <th class="text-center">Total Pinjaman</th>
                     <th class="text-center">Tenor</th>
                     <th class="text-center">Status</th>
-                    <th class="text-center">Survey</th>
                     <th class="text-center">Action</th>
                 </tr>
             </thead>
@@ -56,16 +55,6 @@
                     <td><?php echo rupiah($tbl_pengajuan->total_pinjaman) ?></td>
                     <td><?php echo $tbl_pengajuan->tenor ?> Bulan</td>
                     <td><?php echo nama_status($tbl_pengajuan->status) ?></td>
-                    <td>
-                        <?php 
-                        if($tbl_pengajuan->survey == 0) {
-                            echo 'Survey Belum dilakukan';
-                        } elseif($tbl_pengajuan->survey == 1) {
-                            echo 'Survey Sudah dilakukan';
-                        } 
-                        
-                        ?>
-                    </td>
                     <td style="text-align:center" width="200px">
                         <?php 
                         //echo anchor(site_url('tbl_pengajuan/read/'.$tbl_pengajuan->id_pengajuan),'<i class="fa fa-eye" aria-hidden="true"></i>','class="btn btn-danger btn-sm"'); 

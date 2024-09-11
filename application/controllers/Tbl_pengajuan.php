@@ -101,7 +101,6 @@ class Tbl_pengajuan extends CI_Controller
                 'total_pinjaman' => $this->input->post('total_pinjaman',TRUE),
                 'tenor' => $this->input->post('tenor',TRUE),
                 'status' => '0',
-                'survey' => '0',
             );
 
             $this->Tbl_pengajuan_model->insert($data);
